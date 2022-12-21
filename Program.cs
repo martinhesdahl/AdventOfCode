@@ -17,11 +17,13 @@ foreach (var line in input)
     caloriesForOneElf += int.Parse(line);
 }
 
+Console.WriteLine($"The maximum amount of calories is: {elfsCalories.Max()}");
+
 var orderedByCalories = elfsCalories.OrderByDescending(x => x);
 
 var topThreeElfsWithMostCalories = orderedByCalories.Take(3);
 
 var caloriesOfTopThreeElfs = topThreeElfsWithMostCalories.Sum();
 
-System.Console.WriteLine(caloriesOfTopThreeElfs);
+System.Console.WriteLine($"The calories of the top three elfs is: {caloriesOfTopThreeElfs}");
 Console.ReadLine();
