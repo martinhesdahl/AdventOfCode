@@ -4,7 +4,7 @@ public class Day1
 {
     public static async Task RunAsync()
     {
-        var path = "CaloriesInput.txt";
+        var path = "Day1.txt";
         var input = await File.ReadAllLinesAsync(path);
 
         var elfsCalories = new List<int>();
