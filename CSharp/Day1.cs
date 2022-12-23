@@ -4,7 +4,7 @@ public class Day1
 {
     public static async Task RunAsync()
     {
-        var path = "Day1.txt";
+        var path = "InputFiles/Day1.txt";
         var input = await File.ReadAllLinesAsync(path);
 
         var elfsCalories = new List<int>();
@@ -23,6 +23,7 @@ public class Day1
             caloriesForOneElf += int.Parse(line);
         }
 
+        Console.WriteLine("Day 1 results:");
         Console.WriteLine($"The maximum amount of calories is: {elfsCalories.Max()}");
 
         var orderedByCalories = elfsCalories.OrderByDescending(x => x);
@@ -30,5 +31,6 @@ public class Day1
         var caloriesOfTopThreeElfs = orderedByCalories.Take(3).Sum();
 
         System.Console.WriteLine($"The calories of the top three elfs is: {caloriesOfTopThreeElfs}");
+        Console.WriteLine("--------------------------------------");
     }
 }
